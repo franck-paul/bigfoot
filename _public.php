@@ -59,7 +59,10 @@ class bigfootPublic
 				($core->blog->settings->bigfoot->style == 'bottom' ?
 					'positionContent: false,'."\n" : '')."\n".
 				($core->blog->settings->bigfoot->hover ?
-					'activateOnHover: true, deleteOnUnhover: true, hoverDelay: 500,'."\n" : '')."\n".
+					'activateOnHover: true,'."\n".
+					'deleteOnUnhover: true,'."\n".
+					'hoverDelay: 500,'."\n" :
+					'')."\n".
 				'numberResetSelector: ".post-content",'."\n".
 				'scope: ".post-content"'."\n".
 			'});'."\n".
