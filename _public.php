@@ -23,6 +23,17 @@ class bigfootPublic
 			return;
 		}
 
+		if ($core->blog->settings->bigfoot->single) {
+			// Single mode only, check if post/page context
+			$urlTypes = array('post');
+			if ($core->plugins->moduleExists('pages')) {
+				$urlTypes[] = 'page';
+			}
+			if (!in_array($core->url->type,$urlTypes)) {
+				return;
+			}
+		}
+
 		$style = $core->blog->settings->bigfoot->style;
 		if (!in_array($style,array('default','bottom','numeric'))) {
 			$style = 'default';
@@ -47,6 +58,17 @@ class bigfootPublic
 		$core->blog->settings->addNameSpace('bigfoot');
 		if (!$core->blog->settings->bigfoot->enabled) {
 			return;
+		}
+
+		if ($core->blog->settings->bigfoot->single) {
+			// Single mode only, check if post/page context
+			$urlTypes = array('post');
+			if ($core->plugins->moduleExists('pages')) {
+				$urlTypes[] = 'page';
+			}
+			if (!in_array($core->url->type,$urlTypes)) {
+				return;
+			}
 		}
 
 		echo

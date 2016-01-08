@@ -40,6 +40,9 @@ class bigfootBehaviors
 		'<p><label for="bigfoot_hover" class="classic">'.
 		form::checkbox('bigfoot_hover','1',$settings->bigfoot->hover).
 		__('Activate on hover').'</label>'.'</p>'.
+		'<p><label for="bigfoot_single" class="classic">'.
+		form::checkbox('bigfoot_single','1',$settings->bigfoot->single).
+		__('Activate only in single entry context').'</label>'.'</p>'.
 		'</div>';
 	}
 
@@ -49,5 +52,6 @@ class bigfootBehaviors
 		$settings->bigfoot->put('enabled',!empty($_POST['bigfoot_enabled']),'boolean');
 		$settings->bigfoot->put('style',$_POST['bigfoot_style']);
 		$settings->bigfoot->put('hover',!empty($_POST['bigfoot_hover']));
+		$settings->bigfoot->put('single',!empty($_POST['bigfoot_single']));
 	}
 }
