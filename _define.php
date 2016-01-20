@@ -15,7 +15,7 @@ $this->registerModule(
 	/* Name */			"bigfoot",
 	/* Description*/		"Empowering footnotes",
 	/* Author */			"Franck Paul and contributors",
-	/* Version */			'0.2',
+	/* Version */			'0.2.1',
 	array(
 		//* Dependencies */	'requires' =>		array(array('core','2.9')),
 		/* Permissions */	'permissions' =>	'admin',
