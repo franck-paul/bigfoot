@@ -85,8 +85,8 @@ class bigfootPublic
 					'deleteOnUnhover: true,'."\n".
 					'hoverDelay: 500,'."\n" :
 					'')."\n".
-				'numberResetSelector: ".post-content",'."\n".
-				'scope: ".post-content"'."\n".
+				'numberResetSelector: ".post",'."\n".
+				'scope: ".post"'."\n".
 			'});'."\n".
 		"});\n".
 		"\n//]]>\n".
