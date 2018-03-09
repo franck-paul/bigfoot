@@ -12,16 +12,16 @@
   cursor: pointer;
   background-color: rgba(110, 110, 110, 0.2);
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   font-size: 1rem;
   line-height: 0;
   vertical-align: middle;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   -webkit-transition-property: background-color;
-          transition-property: background-color;
+  transition-property: background-color;
   -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
+  transition-duration: 0.25s;
 }
 .bigfoot-footnote__button:hover, .bigfoot-footnote__button:focus {
   outline: none;
@@ -33,14 +33,13 @@
 .bigfoot-footnote__button.is-active {
   background-color: #6e6e6e;
   -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
 .bigfoot-footnote__button:after {
   content: '';
   display: table;
   clear: both;
 }
-
 .bigfoot-footnote__button__circle {
   display: inline-block;
   width: 0.25em;
@@ -51,21 +50,18 @@
 .bigfoot-footnote__button__circle:last-child {
   margin-right: 0;
 }
-
 .bigfoot-footnote__container {
   display: inline-block;
   position: relative;
   text-indent: 0;
 }
-
 @media not print {
   .footnote-print-only {
     display: none !important;
   }
 }
 @media print {
-  .bigfoot-footnote,
-  .bigfoot-footnote__button {
+  .bigfoot-footnote, .bigfoot-footnote__button {
     display: none !important;
   }
 }
@@ -85,16 +81,16 @@
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   line-height: 0;
   -webkit-transition-property: opacity, -webkit-transform;
-          transition-property: opacity, transform;
+  transition-property: opacity, transform;
   -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
+  transition-duration: 0.25s;
   -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+  transition-timing-function: ease;
   -webkit-transform: scale(0.1) translateZ(0);
-          transform: scale(0.1) translateZ(0);
+  transform: scale(0.1) translateZ(0);
   -webkit-transform-origin: 50% 0;
-      -ms-transform-origin: 50% 0;
-          transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
 }
 .bigfoot-footnote.is-positioned-top {
   top: auto;
@@ -102,7 +98,7 @@
 }
 .bigfoot-footnote.is-active {
   -webkit-transform: scale(1) translateZ(0);
-          transform: scale(1) translateZ(0);
+  transform: scale(1) translateZ(0);
   opacity: 0.97;
 }
 .bigfoot-footnote.is-bottom-fixed {
@@ -112,30 +108,29 @@
   left: 0;
   right: auto;
   -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
-          transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
   width: 100%;
   margin: 0;
   border-radius: 0;
   opacity: 1;
   border-width: 1px 0 0;
   -webkit-transition: -webkit-transform 0.3s ease;
-          transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 .bigfoot-footnote.is-bottom-fixed.is-active {
   -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
 }
 .bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__wrapper {
   margin: 0 0 0 50%;
   -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   max-width: 100%;
 }
-.bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__wrapper,
-.bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__content {
+.bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__wrapper, .bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__content {
   border-radius: 0;
 }
 .bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__tooltip {
@@ -155,9 +150,9 @@
   opacity: 0.3;
   transition-properties: opacity;
   -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
+  transition-duration: 0.25s;
   -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 .bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:before, .bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:after {
   content: '';
@@ -186,9 +181,8 @@
 .bigfoot-footnote.is-fully-scrolled:after, .bigfoot-footnote.is-fully-scrolled:before {
   opacity: 0;
   -webkit-transition-delay: 0;
-          transition-delay: 0;
+  transition-delay: 0;
 }
-
 .bigfoot-footnote__wrapper {
   position: relative;
   z-index: 14;
@@ -201,7 +195,6 @@
   border-radius: 0.5em;
   line-height: 0;
 }
-
 .bigfoot-footnote__content {
   position: relative;
   z-index: 8;
@@ -226,7 +219,6 @@
 .bigfoot-footnote__content *:first-child {
   margin-top: 0 !important;
 }
-
 .bigfoot-footnote__tooltip {
   position: absolute;
   z-index: 12;
@@ -235,8 +227,8 @@
   width: 1.3em;
   height: 1.3em;
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
   background: #fafafa;
   border: 1px solid #c3c3c3;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
@@ -248,7 +240,6 @@
 .is-positioned-top .bigfoot-footnote__tooltip {
   bottom: -0.65em;
 }
-
 .bigfoot-footnote__button {
   position: relative;
   height: 0.95em;
@@ -261,19 +252,18 @@
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   display: block;
   font-size: 0.57em;
   font-weight: bold;
   color: rgba(110, 110, 110, 0.8);
   -webkit-transition: color 0.25s ease;
-          transition: color 0.25s ease;
+  transition: color 0.25s ease;
 }
 .bigfoot-footnote__button:hover:after, .bigfoot-footnote__button.is-active:after {
   color: white;
 }
-
 .bigfoot-footnote__button__circle {
   display: none;
 }
