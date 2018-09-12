@@ -16,19 +16,19 @@ if (!defined('DC_CONTEXT_ADMIN')) {return;}
 // dead but useful code, in order to have translations
 __('bigfoot') . __('Empowering footnotes');
 
-$core->addBehavior('adminBlogPreferencesForm', array('bigfootBehaviors', 'adminBlogPreferencesForm'));
-$core->addBehavior('adminBeforeBlogSettingsUpdate', array('bigfootBehaviors', 'adminBeforeBlogSettingsUpdate'));
+$core->addBehavior('adminBlogPreferencesForm', ['bigfootBehaviors', 'adminBlogPreferencesForm']);
+$core->addBehavior('adminBeforeBlogSettingsUpdate', ['bigfootBehaviors', 'adminBeforeBlogSettingsUpdate']);
 
 class bigfootBehaviors
 {
     public static function adminBlogPreferencesForm($core, $settings)
     {
         # Style options
-        $styles = array(
+        $styles = [
             __("Default") => 'default',
             __("Bottom")  => 'bottom',
             __("Numeric") => 'numeric'
-        );
+        ];
         $settings->addNameSpace('bigfoot');
         echo
         '<div class="fieldset"><h4>Bigfoot</h4>' .

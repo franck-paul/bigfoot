@@ -17,10 +17,10 @@ $this->registerModule(
     "bigfoot",                      // Name
     "Empowering footnotes",         // Description
     "Franck Paul and contributors", // Author
-    '0.3',                          // Version
-    array(
-        'requires'    => array(array('core', '2.9')), // Dependencies
-        'permissions' => 'admin',                     // Permissions
-        'type'        => 'plugin'                    // Type
-    )
+    '0.4',                          // Version
+    [
+        'requires'    => [['core', '2.13']], // Dependencies
+        'permissions' => 'admin',            // Permissions
+        'type'        => 'plugin'           // Type
+    ]
 );

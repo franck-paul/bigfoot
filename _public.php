@@ -13,8 +13,8 @@
 
 if (!defined('DC_RC_PATH')) {return;}
 
-$core->addBehavior('publicHeadContent', array('bigfootPublic', 'publicHeadContent'));
-$core->addBehavior('publicFooterContent', array('bigfootPublic', 'publicFooterContent'));
+$core->addBehavior('publicHeadContent', ['bigfootPublic', 'publicHeadContent']);
+$core->addBehavior('publicFooterContent', ['bigfootPublic', 'publicFooterContent']);
 
 class bigfootPublic
 {
@@ -27,7 +27,7 @@ class bigfootPublic
 
         if ($core->blog->settings->bigfoot->single) {
             // Single mode only, check if post/page context
-            $urlTypes = array('post');
+            $urlTypes = ['post'];
             if ($core->plugins->moduleExists('pages')) {
                 $urlTypes[] = 'page';
             }
@@ -37,7 +37,7 @@ class bigfootPublic
         }
 
         $style = $core->blog->settings->bigfoot->style;
-        if (!in_array($style, array('default', 'bottom', 'numeric'))) {
+        if (!in_array($style, ['default', 'bottom', 'numeric'])) {
             $style = 'default';
         }
 
@@ -63,7 +63,7 @@ class bigfootPublic
 
         if ($core->blog->settings->bigfoot->single) {
             // Single mode only, check if post/page context
-            $urlTypes = array('post');
+            $urlTypes = ['post'];
             if ($core->plugins->moduleExists('pages')) {
                 $urlTypes[] = 'page';
             }
