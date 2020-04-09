@@ -31,7 +31,7 @@ class bigfootBehaviors
         ];
         $settings->addNameSpace('bigfoot');
         echo
-        '<div class="fieldset"><h4>Bigfoot</h4>' .
+        '<div class="fieldset"><h4 id="bigfoot">Bigfoot</h4>' .
         '<p><label class="classic">' .
         form::checkbox('bigfoot_enabled', '1', $settings->bigfoot->enabled) .
         __('Enable Bigfoot') . '</label></p>' .
