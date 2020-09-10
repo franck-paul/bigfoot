@@ -1,8 +1,8 @@
-/*global $, getData */
+/*global $, dotclear */
 'use strict';
 
 $(document).ready(function() {
-  const bigfoot_data = getData('bigfoot');
+  const bigfoot_data = dotclear.getData('bigfoot');
   let bigfoot_options = {
     anchorPattern: /(fn|footnote|note|wiki-footnote)[:\-_\d]/gi,
     footnoteTagname: "p, li",
