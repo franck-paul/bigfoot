@@ -17,9 +17,9 @@ $this->registerModule(
     "bigfoot",                      // Name
     "Empowering footnotes",         // Description
     "Franck Paul and contributors", // Author
-    '0.5',                          // Version
+    '0.6',                          // Version
     [
-        'requires'    => [['core', '2.17']], // Dependencies
+        'requires'    => [['core', '2.18']], // Dependencies
         'permissions' => 'admin',            // Permissions
         'type'        => 'plugin',           // Type
         'details'     => 'https://open-time.net/?q=bigfoot',      // Details URL

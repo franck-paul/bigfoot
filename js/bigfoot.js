@@ -1,3 +1,4 @@
+// Patched on 2020/09/22 (see lines 154, 164 and 172) - Franck Paul
 // Patched on 2015/11/19 (see lines 161 and 168) — Franck Paul
 (function() {
   (function($) {
@@ -104,10 +105,10 @@
         switch (settings.actionOriginalFN.toLowerCase()) {
           case "hide":
           case "delete":
-//              _results.push(deleteEmptyOrHR($footnotesParent));
+              _results.push(deleteEmptyOrHR($footnotesParent));
             break;
           default:
-//            _results.push($footnotesParent.addClass("footnote-print-only"));
+            _results.push($footnotesParent.addClass("footnote-print-only"));
         }
         return _results;
       };
@@ -150,6 +151,7 @@
       deleteEmptyOrHR = function($el) {
         var $parent;
         $parent = void 0;
+        if (!$el || $el.length === 0) return; // added on 2020/09/22
         if ($el.is(":empty") || $el.children(":not(.footnote-print-only)").length === 0) {
           $parent = $el.parent();
           if (settings.actionOriginalFN.toLowerCase() === "delete") {
@@ -159,14 +161,15 @@
           }
           return deleteEmptyOrHR($parent);
         } else if ($el.children(":not(.footnote-print-only)").length ===
-            $el.children("hr:not(.footnote-print-only), h4:not(.footnote-print-only)").length) {
-          //                                          \___ added on 2015/11/19 ___/
+            $el.children("hr:not(.footnote-print-only), h4:not(.footnote-print-only), header:not(.footnote-print-only)").length) {
+          //                                          \___ added on 2015/11/19 ____/\___ added on 2020/09/22 ________/
           $parent = $el.parent();
           if (settings.actionOriginalFN.toLowerCase() === "delete") {
             $el.remove();
           } else {
             $el.children("hr").addClass("footnote-print-only");
-            $el.children("h4").addClass("footnote-print-only");   // added on 2015/11/19
+            $el.children("h4").addClass("footnote-print-only");       // added on 2015/11/19
+            $el.children("header").addClass("footnote-print-only");   // added on 2020/09/22
             $el.addClass("footnote-print-only");
           }
           return deleteEmptyOrHR($parent);
