@@ -10,16 +10,17 @@
  * @copyright Franck Paul carnet.franck.paul@gmail.com
  * @copyright GPL-2.0
  */
-
-if (!defined('DC_RC_PATH')) {return;}
+if (!defined('DC_RC_PATH')) {
+    return;
+}
 
 $this->registerModule(
-    "bigfoot",                      // Name
-    "Empowering footnotes",         // Description
-    "Franck Paul and contributors", // Author
+    'bigfoot',                      // Name
+    'Empowering footnotes',         // Description
+    'Franck Paul and contributors', // Author
     '0.6',                          // Version
     [
-        'requires'    => [['core', '2.18']], // Dependencies
+        'requires'    => [['core', '2.19']], // Dependencies
         'permissions' => 'admin',            // Permissions
         'type'        => 'plugin',           // Type
         'details'     => 'https://open-time.net/?q=bigfoot',      // Details URL
