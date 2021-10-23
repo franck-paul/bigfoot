@@ -23,10 +23,12 @@ $this->registerModule(
         'requires'    => [['core', '2.19']], // Dependencies
         'permissions' => 'admin',            // Permissions
         'type'        => 'plugin',           // Type
-        'details'     => 'https://open-time.net/?q=bigfoot',      // Details URL
-        'support'     => 'https://github.com/franck-paul/bigfoot', // Support URL
         'settings'    => [
             'blog' => '#params.bigfoot'
-        ]
+        ],
+
+        'details'    => 'https://open-time.net/?q=bigfoot',       // Details URL
+        'support'    => 'https://github.com/franck-paul/bigfoot', // Support URL
+        'repository' => 'https://raw.githubusercontent.com/franck-paul/bigfoot/main/dcstore.xml'
     ]
 );
