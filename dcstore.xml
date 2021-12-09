@@ -1,8 +1,8 @@
 <modules xmlns:da="http://dotaddict.org/da/">
   <module id="bigfoot">
-    <name>Empowering footnotes</name>
+    <name>bigfoot</name>
     <version>0.6</version>
-    <author>Empowering footnotes</author>
+    <author>Franck Paul and contributors</author>
     <desc>Empowering footnotes</desc>
     <file>https://github.com/franck-paul/bigfoot/releases/download/0.6/plugin-bigfoot-0.6.zip</file>
     <da:dcmin>2.19</da:dcmin>
