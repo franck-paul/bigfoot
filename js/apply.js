@@ -1,9 +1,9 @@
 /*global $, dotclear */
 'use strict';
 
-$(document).ready(function () {
+$(() => {
   const bigfoot_data = dotclear.getData('bigfoot');
-  let bigfoot_options = {
+  const bigfoot_options = {
     anchorPattern: /(fn|footnote|note|wiki-footnote)[:\-_\d]/gi,
     footnoteTagname: 'p, li',
     numberResetSelector: '.post',
