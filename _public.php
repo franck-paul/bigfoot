@@ -14,11 +14,9 @@ if (!defined('DC_RC_PATH')) {
     return;
 }
 
-dcCore::app()->addBehavior('publicHeadContent', ['bigfootPublic', 'publicHeadContent']);
-
 class bigfootPublic
 {
-    public static function publicHeadContent($core)
+    public static function publicHeadContent()
     {
         dcCore::app()->blog->settings->addNameSpace('bigfoot');
         if (!dcCore::app()->blog->settings->bigfoot->enabled) {
@@ -52,3 +50,5 @@ class bigfootPublic
         dcUtils::jsModuleLoad('bigfoot/js/apply.js');
     }
 }
+
+dcCore::app()->addBehavior('publicHeadContent', [bigfootPublic::class, 'publicHeadContent']);

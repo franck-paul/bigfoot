@@ -15,20 +15,22 @@ if (!defined('DC_RC_PATH')) {
 }
 
 $this->registerModule(
-    'bigfoot',                      // Name
-    'Empowering footnotes',         // Description
-    'Franck Paul and contributors', // Author
-    '0.7',
+    'bigfoot',
+    'Empowering footnotes',
+    'Franck Paul and contributors',
+    '0.8',
     [
-        'requires'    => [['core', '2.21']], // Dependencies
-        'permissions' => 'admin',            // Permissions
-        'type'        => 'plugin',           // Type
-        'settings'    => [
+        'requires'    => [['core', '2.24']],
+        'permissions' => dcCore::app()->auth->makePermissions([
+            dcAuth::PERMISSION_ADMIN,
+        ]),
+        'type'     => 'plugin',
+        'settings' => [
             'blog' => '#params.bigfoot',
         ],
 
-        'details'    => 'https://open-time.net/?q=bigfoot',       // Details URL
-        'support'    => 'https://github.com/franck-paul/bigfoot', // Support URL
+        'details'    => 'https://open-time.net/?q=bigfoot',
+        'support'    => 'https://github.com/franck-paul/bigfoot',
         'repository' => 'https://raw.githubusercontent.com/franck-paul/bigfoot/master/dcstore.xml',
     ]
 );

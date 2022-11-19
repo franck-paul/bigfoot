@@ -17,12 +17,9 @@ if (!defined('DC_CONTEXT_ADMIN')) {
 // dead but useful code, in order to have translations
 __('bigfoot') . __('Empowering footnotes');
 
-dcCore::app()->addBehavior('adminBlogPreferencesForm', ['bigfootBehaviors', 'adminBlogPreferencesForm']);
-dcCore::app()->addBehavior('adminBeforeBlogSettingsUpdate', ['bigfootBehaviors', 'adminBeforeBlogSettingsUpdate']);
-
 class bigfootBehaviors
 {
-    public static function adminBlogPreferencesForm($core, $settings)
+    public static function adminBlogPreferencesForm($settings)
     {
         # Style options
         $styles = [
@@ -58,3 +55,6 @@ class bigfootBehaviors
         $settings->bigfoot->put('single', !empty($_POST['bigfoot_single']));
     }
 }
+
+dcCore::app()->addBehavior('adminBlogPreferencesFormV2', [bigfootBehaviors::class, 'adminBlogPreferencesForm']);
+dcCore::app()->addBehavior('adminBeforeBlogSettingsUpdate', [bigfootBehaviors::class, 'adminBeforeBlogSettingsUpdate']);

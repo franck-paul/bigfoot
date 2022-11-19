@@ -1,2 +1,3 @@
-[Source](http://www.bigfootjs.com/)
+# Inspiration
 
+[Source](http://www.bigfootjs.com/)
