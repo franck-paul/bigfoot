@@ -18,7 +18,6 @@ class bigfootPublic
 {
     public static function publicHeadContent()
     {
-        dcCore::app()->blog->settings->addNameSpace('bigfoot');
         if (!dcCore::app()->blog->settings->bigfoot->enabled) {
             return;
         }
