@@ -10,17 +10,13 @@
  * @copyright Franck Paul carnet.franck.paul@gmail.com
  * @copyright GPL-2.0
  */
-if (!defined('DC_RC_PATH')) {
-    return;
-}
-
 $this->registerModule(
     'bigfoot',
     'Empowering footnotes',
     'Franck Paul and contributors',
-    '0.8',
+    '1.0',
     [
-        'requires'    => [['core', '2.24']],
+        'requires'    => [['core', '2.26']],
         'permissions' => dcCore::app()->auth->makePermissions([
             dcAuth::PERMISSION_ADMIN,
         ]),

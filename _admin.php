@@ -27,7 +27,6 @@ class bigfootBehaviors
             __('Bottom')  => 'bottom',
             __('Numeric') => 'numeric',
         ];
-        $settings->addNameSpace('bigfoot');
         echo
         '<div class="fieldset"><h4 id="bigfoot">Bigfoot</h4>' .
         '<p><label class="classic">' .
@@ -48,7 +47,6 @@ class bigfootBehaviors
 
     public static function adminBeforeBlogSettingsUpdate($settings)
     {
-        $settings->addNameSpace('bigfoot');
         $settings->bigfoot->put('enabled', !empty($_POST['bigfoot_enabled']), 'boolean');
         $settings->bigfoot->put('style', $_POST['bigfoot_style']);
         $settings->bigfoot->put('hover', !empty($_POST['bigfoot_hover']));
@@ -56,5 +54,7 @@ class bigfootBehaviors
     }
 }
 
-dcCore::app()->addBehavior('adminBlogPreferencesFormV2', [bigfootBehaviors::class, 'adminBlogPreferencesForm']);
-dcCore::app()->addBehavior('adminBeforeBlogSettingsUpdate', [bigfootBehaviors::class, 'adminBeforeBlogSettingsUpdate']);
+dcCore::app()->addBehaviors([
+    'adminBlogPreferencesFormV2'    => [bigfootBehaviors::class, 'adminBlogPreferencesForm'],
+    'adminBeforeBlogSettingsUpdate' => [bigfootBehaviors::class, 'adminBeforeBlogSettingsUpdate'],
+]);

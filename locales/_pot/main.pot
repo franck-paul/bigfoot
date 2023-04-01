@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dotclear 2 bigfoot module\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-08 10:27+0100\n"
+"POT-Creation-Date: 2023-04-01 09:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,34 +16,42 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../hg-plugins/bigfoot/_admin.php:15
+#: ../git-plugins/bigfoot/_admin.php:18
 msgid "Empowering footnotes"
 msgstr ""
 
-#: ../hg-plugins/bigfoot/_admin.php:15
+#: ../git-plugins/bigfoot/_admin.php:18
 msgid "bigfoot"
 msgstr ""
 
-#: ../hg-plugins/bigfoot/_admin.php:27
+#: ../git-plugins/bigfoot/_admin.php:26
+msgid "Default"
+msgstr ""
+
+#: ../git-plugins/bigfoot/_admin.php:27
 msgid "Bottom"
 msgstr ""
 
-#: ../hg-plugins/bigfoot/_admin.php:28
+#: ../git-plugins/bigfoot/_admin.php:28
 msgid "Numeric"
 msgstr ""
 
-#: ../hg-plugins/bigfoot/_admin.php:35
+#: ../git-plugins/bigfoot/_admin.php:34
 msgid "Enable Bigfoot"
 msgstr ""
 
-#: ../hg-plugins/bigfoot/_admin.php:37
+#: ../git-plugins/bigfoot/_admin.php:35
+msgid "Options"
+msgstr ""
+
+#: ../git-plugins/bigfoot/_admin.php:36
 msgid "Style:"
 msgstr ""
 
-#: ../hg-plugins/bigfoot/_admin.php:42
+#: ../git-plugins/bigfoot/_admin.php:41
 msgid "Activate on hover"
 msgstr ""
 
-#: ../hg-plugins/bigfoot/_admin.php:45
+#: ../git-plugins/bigfoot/_admin.php:44
 msgid "Activate only in single entry context"
 msgstr ""
