@@ -17,35 +17,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "Empowering footnotes"
-msgstr "Autonomisatateur de note"
+msgstr ""
 
 msgid "bigfoot"
-msgstr "bigfoot"
+msgstr ""
 
 msgid "Default"
 msgstr ""
 
 msgid "Bottom"
-msgstr "Pied de page"
+msgstr ""
 
 msgid "Numeric"
-msgstr "Numérique"
+msgstr ""
 
 msgid "Enable Bigfoot"
-msgstr "Activer Bigfoot"
+msgstr ""
 
 msgid "Options"
 msgstr ""
 
 msgid "Style:"
-msgstr "Style :"
+msgstr ""
 
 msgid "Activate on hover"
-msgstr "Activer au survol"
+msgstr ""
 
 msgid "Activate only in single entry context"
-msgstr "Activer uniquement dans les contextes d'entrée unique (billet ou page)"
+msgstr ""
 
-#, fuzzy
 msgid "Bigfoot"
-msgstr "bigfoot"
+msgstr ""
