@@ -47,9 +47,9 @@ class FrontendBehaviors
             'style' => $style,
             'hover' => ($settings->hover ? true : false),
         ]) .
-        dcUtils::cssModuleLoad('bigfoot/css/bigfoot-' . $style . '.css') .
-        dcUtils::cssModuleLoad('bigfoot/css/bigfoot.css') .
-        dcUtils::jsModuleLoad('bigfoot/js/bigfoot.js') .
-        dcUtils::jsModuleLoad('bigfoot/js/apply.js');
+        dcUtils::cssModuleLoad(My::id() . '/css/bigfoot-' . $style . '.css') .
+        dcUtils::cssModuleLoad(My::id() . '/css/bigfoot.css') .
+        dcUtils::jsModuleLoad(My::id() . '/js/bigfoot.js') .
+        dcUtils::jsModuleLoad(My::id() . '/js/apply.js');
     }
 }
