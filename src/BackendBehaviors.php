@@ -25,8 +25,10 @@ use Dotclear\Helper\Html\Form\Text;
 
 class BackendBehaviors
 {
-    public static function adminBlogPreferencesForm($settings)
+    public static function adminBlogPreferencesForm(): string
     {
+        $settings = My::settings();
+
         # Style options
         $styles = [
             __('Default') => 'default',
@@ -39,7 +41,7 @@ class BackendBehaviors
         ->legend((new Legend(__('Bigfoot'))))
         ->fields([
             (new Para())->items([
-                (new Checkbox('bigfoot_enabled', (bool) $settings->get(My::id())->enabled))
+                (new Checkbox('bigfoot_enabled', (bool) $settings->enabled))
                 ->value(1)
                 ->label((new Label(__('Enable Bigfoot'), Label::INSIDE_TEXT_AFTER))),
             ]),
@@ -47,29 +49,35 @@ class BackendBehaviors
             (new Para())->items([
                 (new Select('bigfoot_style'))
                 ->items($styles)
-                ->default($settings->get(My::id())->style)
+                ->default($settings->style)
                 ->label((new Label(__('Style:'), Label::INSIDE_TEXT_BEFORE))),
             ]),
             (new Para())->items([
-                (new Checkbox('bigfoot_hover', (bool) $settings->get(My::id())->hover))
+                (new Checkbox('bigfoot_hover', (bool) $settings->hover))
                 ->value(1)
                 ->label((new Label(__('Activate on hover'), Label::INSIDE_TEXT_AFTER))),
             ]),
 
             (new Para())->items([
-                (new Checkbox('bigfoot_single', (bool) $settings->get(My::id())->single))
+                (new Checkbox('bigfoot_single', (bool) $settings->single))
                 ->value(1)
                 ->label((new Label(__('Activate only in single entry context'), Label::INSIDE_TEXT_AFTER))),
             ]),
         ])
         ->render();
+
+        return '';
     }
 
-    public static function adminBeforeBlogSettingsUpdate($settings)
+    public static function adminBeforeBlogSettingsUpdate(): string
     {
-        $settings->get(My::id())->put('enabled', !empty($_POST['bigfoot_enabled']), dcNamespace::NS_BOOL);
-        $settings->get(My::id())->put('style', $_POST['bigfoot_style'], dcNamespace::NS_STRING);
-        $settings->get(My::id())->put('hover', !empty($_POST['bigfoot_hover']), dcNamespace::NS_BOOL);
-        $settings->get(My::id())->put('single', !empty($_POST['bigfoot_single']), dcNamespace::NS_BOOL);
+        $settings = My::settings();
+
+        $settings->put('enabled', !empty($_POST['bigfoot_enabled']), dcNamespace::NS_BOOL);
+        $settings->put('style', $_POST['bigfoot_style'], dcNamespace::NS_STRING);
+        $settings->put('hover', !empty($_POST['bigfoot_hover']), dcNamespace::NS_BOOL);
+        $settings->put('single', !empty($_POST['bigfoot_single']), dcNamespace::NS_BOOL);
+
+        return '';
     }
 }

@@ -19,11 +19,11 @@ use dcUtils;
 
 class FrontendBehaviors
 {
-    public static function publicHeadContent()
+    public static function publicHeadContent(): string
     {
         $settings = My::settings();
         if (!$settings->enabled) {
-            return;
+            return '';
         }
 
         if ($settings->single) {
@@ -33,7 +33,7 @@ class FrontendBehaviors
                 $urlTypes[] = 'page';
             }
             if (!in_array(dcCore::app()->url->type, $urlTypes)) {
-                return;
+                return '';
             }
         }
 
@@ -51,5 +51,7 @@ class FrontendBehaviors
         My::cssLoad('bigfoot.css') .
         My::jsLoad('bigfoot.js') .
         My::jsLoad('apply.js');
+
+        return '';
     }
 }
