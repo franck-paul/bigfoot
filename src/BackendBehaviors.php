@@ -14,7 +14,7 @@ declare(strict_types=1);
 
 namespace Dotclear\Plugin\bigfoot;
 
-use dcNamespace;
+use Dotclear\App;
 use Dotclear\Helper\Html\Form\Checkbox;
 use Dotclear\Helper\Html\Form\Fieldset;
 use Dotclear\Helper\Html\Form\Label;
@@ -73,10 +73,10 @@ class BackendBehaviors
     {
         $settings = My::settings();
 
-        $settings->put('enabled', !empty($_POST['bigfoot_enabled']), dcNamespace::NS_BOOL);
-        $settings->put('style', $_POST['bigfoot_style'], dcNamespace::NS_STRING);
-        $settings->put('hover', !empty($_POST['bigfoot_hover']), dcNamespace::NS_BOOL);
-        $settings->put('single', !empty($_POST['bigfoot_single']), dcNamespace::NS_BOOL);
+        $settings->put('enabled', !empty($_POST['bigfoot_enabled']), App::blogWorkspace()::NS_BOOL);
+        $settings->put('style', $_POST['bigfoot_style'], App::blogWorkspace()::NS_STRING);
+        $settings->put('hover', !empty($_POST['bigfoot_hover']), App::blogWorkspace()::NS_BOOL);
+        $settings->put('single', !empty($_POST['bigfoot_single']), App::blogWorkspace()::NS_BOOL);
 
         return '';
     }

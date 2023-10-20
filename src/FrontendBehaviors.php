@@ -14,8 +14,8 @@ declare(strict_types=1);
 
 namespace Dotclear\Plugin\bigfoot;
 
-use dcCore;
-use dcUtils;
+use Dotclear\App;
+use Dotclear\Helper\Html\Html;
 
 class FrontendBehaviors
 {
@@ -29,10 +29,10 @@ class FrontendBehaviors
         if ($settings->single) {
             // Single mode only, check if post/page context
             $urlTypes = ['post'];
-            if (dcCore::app()->plugins->moduleExists('pages')) {
+            if (App::plugins()->moduleExists('pages')) {
                 $urlTypes[] = 'page';
             }
-            if (!in_array(dcCore::app()->url->type, $urlTypes)) {
+            if (!in_array(App::url()->type, $urlTypes)) {
                 return '';
             }
         }
@@ -43,7 +43,7 @@ class FrontendBehaviors
         }
 
         echo
-        dcUtils::jsJson('bigfoot', [
+        Html::jsJson('bigfoot', [
             'style' => $style,
             'hover' => ($settings->hover ? true : false),
         ]) .
