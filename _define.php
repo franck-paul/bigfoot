@@ -14,7 +14,7 @@ $this->registerModule(
     'bigfoot',
     'Empowering footnotes',
     'Franck Paul and contributors',
-    '2.0',
+    '3.0',
     [
         'requires'    => [['core', '2.28']],
         'permissions' => 'My',
