@@ -32,7 +32,8 @@ class FrontendBehaviors
             if (App::plugins()->moduleExists('pages')) {
                 $urlTypes[] = 'page';
             }
-            if (!in_array(App::url()->type, $urlTypes)) {
+
+            if (!in_array(App::url()->getType(), $urlTypes)) {
                 return '';
             }
         }
@@ -45,7 +46,7 @@ class FrontendBehaviors
         echo
         Html::jsJson('bigfoot', [
             'style' => $style,
-            'hover' => ($settings->hover ? true : false),
+            'hover' => ((bool) $settings->hover),
         ]) .
         My::cssLoad('bigfoot-' . $style . '.css') .
         My::cssLoad('bigfoot.css') .
