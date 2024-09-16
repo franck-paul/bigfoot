@@ -25,6 +25,6 @@ $this->registerModule(
 
         'details'    => 'https://open-time.net/?q=bigfoot',
         'support'    => 'https://github.com/franck-paul/bigfoot',
-        'repository' => 'https://raw.githubusercontent.com/franck-paul/bigfoot/master/dcstore.xml',
+        'repository' => 'https://raw.githubusercontent.com/franck-paul/bigfoot/main/dcstore.xml',
     ]
 );
