@@ -1,7 +1,7 @@
 /*global $, dotclear */
 'use strict';
 
-$(() => {
+dotclear.ready(() => {
   const bigfoot_data = dotclear.getData('bigfoot');
   const bigfoot_options = {
     anchorPattern: /(fn|footnote|note|wiki-footnote)[:\-_\d]/gi,
@@ -9,7 +9,7 @@ $(() => {
     numberResetSelector: '.post',
     scope: '.post',
   };
-  if (bigfoot_data.style == 'bottom') {
+  if (bigfoot_data.style === 'bottom') {
     bigfoot_options.positionContent = false;
   }
   if (bigfoot_data.hover) {
