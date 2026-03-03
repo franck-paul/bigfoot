@@ -18,7 +18,7 @@ Sa fonction est de présenter les notes de bas de page des billets et des pages 
 Habituellement un billet avec des notes de bas de page se présente comme suit :
 
 <div class="attach-image" markdown="1">
-![Copie d'écran d'un billet comportant des notes de bas de page.](https://github.com/franck-paul/bigfoot/blob/main/doc/bigfoot-off.jpg?raw=true)
+![Copie d'écran d'un billet comportant des notes de bas de page.](doc/bigfoot-off.jpg)
 </div>
 
 Voilà son équivalent textuel :
@@ -40,7 +40,7 @@ Un texte, avec des **appels de note**, ici des numéros consécutifs encadrés p
 Une fois installé, le plugin possède quelques réglages, accessibles dans les **paramètres du blog** (c'est donc à régler pour chacun des blogs que vous avez) :
 
 <div class="attach-image" markdown="1">
-![Copie d'écran des réglages du plugin bigfoot](https://github.com/franck-paul/bigfoot/blob/main/doc/bigfoot-settings.jpg?raw=true)
+![Copie d'écran des réglages du plugin bigfoot](doc/bigfoot-settings.jpg)
 </div>
 
 Avec dans l'ordre :
@@ -62,23 +62,23 @@ Avec dans l'ordre :
 Voilà le même billet que ci-dessus avec le **réglage par défaut** :
 
 <div class="attach-image" markdown="1">
-![Copie d'écran d'un billet comportant des notes de bas de page, les appels de note sont représentés par trois petits points.](https://github.com/franck-paul/bigfoot/blob/main/doc/bigfoot-std.jpg?raw=true)
+![Copie d'écran d'un billet comportant des notes de bas de page, les appels de note sont représentés par trois petits points.](doc/bigfoot-std.jpg)
 </div>
 
 Et lorsqu'on **clique** sur l'appel de note :
 
 <div class="attach-image" markdown="1">
-![Copie d'écran d'un billet comportant des notes de bas de page. Un appel de note est activé et le contenu de celle-ci est affichée juste en dessous.](https://github.com/franck-paul/bigfoot/blob/main/doc/bigfoot-click.jpg?raw=true)
+![Copie d'écran d'un billet comportant des notes de bas de page. Un appel de note est activé et le contenu de celle-ci est affichée juste en dessous.](doc/bigfoot-click.jpg)
 </div>
 
 Avec le style **pied de page** le contenu de la note est affichée en bas à gauche de la fenêtre :
 
 <div class="attach-image" markdown="1">
-![Copie d'écran du contenu d'une note de bas de page affiché en bas à gauche de la fenêtre.](https://github.com/franck-paul/bigfoot/blob/main/doc/bigfoot-bottom.jpg?raw=true)
+![Copie d'écran du contenu d'une note de bas de page affiché en bas à gauche de la fenêtre.](doc/bigfoot-bottom.jpg)
 </div>
 
 Et avec le style **numérique**, le billet se présente comme suit :
 
 <div class="attach-image" markdown="1">
-![Copie d'écran d'un billet comportant des notes de bas de page. Les appels de note sont numérotés.](https://github.com/franck-paul/bigfoot/blob/main/doc/bigfoot-number.jpg?raw=true)
+![Copie d'écran d'un billet comportant des notes de bas de page. Les appels de note sont numérotés.](doc/bigfoot-number.jpg)
 </div>
