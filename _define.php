@@ -15,9 +15,9 @@ $this->registerModule(
     'bigfoot',
     'Empowering footnotes',
     'Franck Paul and contributors',
-    '4.2',
+    '4.2.1',
     [
-        'date'        => '2025-11-26T10:52:01+0100',
+        'date'        => '2026-03-17T08:02:27+0100',
         'requires'    => [['core', '2.36']],
         'permissions' => 'My',
         'type'        => 'plugin',
