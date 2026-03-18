@@ -9,7 +9,8 @@
   border: none;
   border-radius: 0.3em;
   cursor: pointer;
-  background-color: rgba(110, 110, 110, 0.2);
+  color: #fafafa;
+  background-color: rgba(110, 110, 110, 0.8);
   backface-visibility: hidden;
   font-size: 1rem;
   line-height: 0;
@@ -23,15 +24,15 @@
 .bigfoot-footnote__button:hover,
 .bigfoot-footnote__button:focus {
   outline: none;
-  background-color: rgba(110, 110, 110, 0.5);
+  background-color: rgba(110, 110, 110, 1);
 }
 
 .bigfoot-footnote__button:active {
-  background-color: rgba(110, 110, 110, 0.5);
+  background-color: rgba(110, 110, 110, 1);
 }
 
 .bigfoot-footnote__button.is-active {
-  background-color: #6e6e6e;
+  background-color: rgba(110, 110, 110, 1);
   transition-delay: 0.1s;
 }
 
@@ -50,6 +51,35 @@
 
 .bigfoot-footnote__button__circle:last-child {
   margin-right: 0;
+}
+
+.bigfoot-footnote__button {
+  position: relative;
+  height: 0.95em;
+  width: 1.5em;
+  border-radius: 0.475em;
+}
+
+.bigfoot-footnote__button:after {
+  content: attr(data-footnote-number);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  font-size: 0.57em;
+  font-weight: bold;
+  color: #fafafa;
+  transition: color 0.25s ease;
+}
+
+.bigfoot-footnote__button:hover:after,
+.bigfoot-footnote__button.is-active:after {
+  color: white;
+}
+
+.bigfoot-footnote__button__circle {
+  display: none;
 }
 
 .bigfoot-footnote__container {
@@ -80,6 +110,7 @@
   box-sizing: border-box;
   max-width: 90%;
   margin: 1.96924em 0;
+  color: oklch(from light-dark(#fafafa, #333) round(1.21 - L) 0 0);
   background: light-dark(#fafafa, #333);
   opacity: 0;
   border-radius: 0.5em;
@@ -167,6 +198,7 @@
   top: -1px;
   height: 1.1em;
   border-radius: 0.5em 0.5em 0 0;
+  color: oklch(from light-dark(#fafafa, #333) round(1.21 - L) 0 0);
   background-image: linear-gradient(to bottom, light-dark(#fafafa, #333) 50%, rgba(250, 250, 250, 0) 100%);
 }
 
@@ -174,6 +206,7 @@
   bottom: -1px;
   height: 1.2em;
   border-radius: 0 0 0.5em 0.5em;
+  color: oklch(from light-dark(#fafafa, #333) round(1.21 - L) 0 0);
   background-image: linear-gradient(to top, light-dark(#fafafa, #333) 50%, rgba(250, 250, 250, 0) 100%);
 }
 
@@ -195,6 +228,7 @@
   box-sizing: inherit;
   overflow: hidden;
   margin: 0;
+  color: oklch(from light-dark(#fafafa, #333) round(1.21 - L) 0 0);
   background-color: light-dark(#fafafa, #333);
   border-radius: 0.5em;
   line-height: 0;
@@ -210,6 +244,7 @@
   box-sizing: inherit;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+  color: oklch(from light-dark(#fafafa, #333) round(1.21 - L) 0 0);
   background: light-dark(#fafafa, #333);
   border-radius: 0.5em;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -236,6 +271,7 @@
   width: 1.3em;
   height: 1.3em;
   transform: rotate(45deg);
+  color: oklch(from light-dark(#fafafa, #333) round(1.21 - L) 0 0);
   background: light-dark(#fafafa, #333);
   border: 1px solid #c3c3c3;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
@@ -248,33 +284,4 @@
 
 .is-positioned-top .bigfoot-footnote__tooltip {
   bottom: -0.65em;
-}
-
-.bigfoot-footnote__button {
-  position: relative;
-  height: 0.95em;
-  width: 1.5em;
-  border-radius: 0.475em;
-}
-
-.bigfoot-footnote__button:after {
-  content: attr(data-footnote-number);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  font-size: 0.57em;
-  font-weight: bold;
-  color: rgba(110, 110, 110, 0.8);
-  transition: color 0.25s ease;
-}
-
-.bigfoot-footnote__button:hover:after,
-.bigfoot-footnote__button.is-active:after {
-  color: white;
-}
-
-.bigfoot-footnote__button__circle {
-  display: none;
 }
