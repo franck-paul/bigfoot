@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @brief bigfoot, a plugin for Dotclear 2
  *
@@ -7,7 +8,7 @@
  *
  * @author Franck Paul and contributors
  *
- * @copyright Franck Paul carnet.franck.paul@gmail.com
+ * @copyright Franck Paul contact@open-time.net
  * @copyright GPL-2.0 https://www.gnu.org/licenses/gpl-2.0.html
  */
 declare(strict_types=1);
@@ -36,6 +37,8 @@ class BackendBehaviors
             __('Numeric') => 'numeric',
         ];
 
+        $style = is_string($style = $settings->style) ? $style : '';
+
         echo
         (new Fieldset('bigfoot'))
         ->legend((new Legend(__('Bigfoot'))))
@@ -49,7 +52,7 @@ class BackendBehaviors
             (new Para())->items([
                 (new Select('bigfoot_style'))
                 ->items($styles)
-                ->default($settings->style)
+                ->default($style)
                 ->label((new Label(__('Style:'), Label::INSIDE_TEXT_BEFORE))),
             ]),
             (new Para())->items([
