@@ -40,7 +40,7 @@ class FrontendBehaviors
         }
 
         $style = is_string($style = $settings->style) ? $style : '';
-        if (!in_array($style, ['default', 'bottom', 'numeric'])) {
+        if (!in_array($style, ['default', 'bottom', 'numeric'], true)) {
             $style = 'default';
         }
 
