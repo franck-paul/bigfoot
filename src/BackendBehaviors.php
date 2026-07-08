@@ -37,14 +37,14 @@ class BackendBehaviors
             __('Numeric') => 'numeric',
         ];
 
-        $style = is_string($style = $settings->style) ? $style : '';
+        $style = $settings->getStr('style', false);
 
         echo
         (new Fieldset('bigfoot'))
         ->legend((new Legend(__('Bigfoot'))))
         ->fields([
             (new Para())->items([
-                (new Checkbox('bigfoot_enabled', (bool) $settings->enabled))
+                (new Checkbox('bigfoot_enabled', $settings->getBool('enabled', false)))
                 ->value(1)
                 ->label((new Label(__('Enable Bigfoot'), Label::INSIDE_TEXT_AFTER))),
             ]),
@@ -56,13 +56,13 @@ class BackendBehaviors
                 ->label((new Label(__('Style:'), Label::INSIDE_TEXT_BEFORE))),
             ]),
             (new Para())->items([
-                (new Checkbox('bigfoot_hover', (bool) $settings->hover))
+                (new Checkbox('bigfoot_hover', $settings->getBool('hover', false)))
                 ->value(1)
                 ->label((new Label(__('Activate on hover'), Label::INSIDE_TEXT_AFTER))),
             ]),
 
             (new Para())->items([
-                (new Checkbox('bigfoot_single', (bool) $settings->single))
+                (new Checkbox('bigfoot_single', $settings->getBool('single', false)))
                 ->value(1)
                 ->label((new Label(__('Activate only in single entry context'), Label::INSIDE_TEXT_AFTER))),
             ]),

@@ -23,11 +23,11 @@ class FrontendBehaviors
     public static function publicHeadContent(): string
     {
         $settings = My::settings();
-        if (!$settings->enabled) {
+        if (!$settings->getBool('enabled')) {
             return '';
         }
 
-        if ($settings->single) {
+        if ($settings->getBool('single')) {
             // Single mode only, check if post/page context
             $urlTypes = ['post'];
             if (App::plugins()->moduleExists('pages')) {
@@ -39,7 +39,7 @@ class FrontendBehaviors
             }
         }
 
-        $style = is_string($style = $settings->style) ? $style : '';
+        $style = $settings->getStr('style');
         if (!in_array($style, ['default', 'bottom', 'numeric'], true)) {
             $style = 'default';
         }
@@ -47,7 +47,7 @@ class FrontendBehaviors
         echo
         Html::jsJson('bigfoot', [
             'style' => $style,
-            'hover' => ((bool) $settings->hover),
+            'hover' => ($settings->getBool('hover', false)),
         ]) .
         My::cssLoad('bigfoot-' . $style . '.css') .
         My::cssLoad('bigfoot.css') .
