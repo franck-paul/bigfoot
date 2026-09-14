@@ -1,11 +1,14 @@
 .bigfoot-footnote__button {
   position: relative;
   z-index: 5;
-  top: -0.1em;
+  inset-block-start: -0.1em;
   box-sizing: border-box;
   display: inline-block;
   padding: 0.35em;
-  margin: 0 0.1em 0 0.2em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0.2em;
+  margin-inline-end: 0.1em;
   border: none;
   border-radius: 0.3em;
   cursor: pointer;
@@ -42,14 +45,14 @@
 }
 
 .bigfoot-footnote__button__circle {
-  width: 0.25em;
-  height: 0.25em;
-  margin-right: 0.25em;
-  float: left;
+  inline-size: 0.25em;
+  block-size: 0.25em;
+  margin-inline-end: 0.25em;
+  float: inline-start;
 }
 
 .bigfoot-footnote__button__circle:last-child {
-  margin-right: 0;
+  margin-inline-end: 0;
 }
 
 .bigfoot-footnote__container {
@@ -74,11 +77,11 @@
 .bigfoot-footnote {
   position: absolute;
   z-index: 10;
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   display: inline-block;
   box-sizing: border-box;
-  max-width: 90%;
+  max-inline-size: 90%;
   margin: 1.96924em 0;
   color: oklch(from light-dark(#fafafa, #333) round(1.21 - L) 0 0);
   background: light-dark(#fafafa, #333);
@@ -95,8 +98,8 @@
 }
 
 .bigfoot-footnote.is-positioned-top {
-  top: auto;
-  bottom: 0;
+  inset-block-start: auto;
+  inset-block-end: 0;
 }
 
 .bigfoot-footnote.is-active {
@@ -106,12 +109,12 @@
 
 .bigfoot-footnote.is-bottom-fixed {
   position: fixed;
-  bottom: 0;
-  top: auto;
-  left: 0;
-  right: auto;
+  inset-block-end: 0;
+  inset-block-start: auto;
+  inset-inline-start: 0;
+  inset-inline-end: auto;
   transform: translateY(100%);
-  width: 100%;
+  inline-size: 100%;
   margin: 0;
   border-radius: 0;
   opacity: 1;
@@ -124,9 +127,12 @@
 }
 
 .bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__wrapper {
-  margin: 0 0 0 50%;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 50%;
+  margin-inline-end: 0;
   transform: translateX(-50%);
-  max-width: 100%;
+  max-inline-size: 100%;
 }
 
 .bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__wrapper,
@@ -141,12 +147,12 @@
 .bigfoot-footnote.is-scrollable:after {
   content: '';
   position: absolute;
-  bottom: 0.3375em;
-  left: 0.3375em;
+  inset-block-end: 0.3375em;
+  inset-inline-start: 0.3375em;
   z-index: 14;
   display: block;
-  height: 0.78125em;
-  width: 0.625em;
+  block-size: 0.78125em;
+  inline-size: 0.625em;
   background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTJweCIgaGVpZ2h0PSIxNXB4IiB2aWV3Qm94PSIwIDAgMTIgMTUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4iPgogICAgPGcgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkFycm93IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxLjAwMDAwMCwgMS4wMDAwMDApIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiPgogICAgICAgICAgICA8cGF0aCBkPSJNNSwwIEw1LDExLjUiIGlkPSJMaW5lIj48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0wLjUsNy41IEw1LjAyNzY5Mjc5LDEyLjAyNzY5MjgiIGlkPSJMaW5lIj48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik00LjUsNy41IEw5LjAyNzY5Mjc5LDEyLjAyNzY5MjgiIGlkPSJMaW5lLTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcuMDAwMDAwLCAxMC4wMDAwMDApIHNjYWxlKC0xLCAxKSB0cmFuc2xhdGUoLTcuMDAwMDAwLCAtMTAuMDAwMDAwKSAiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=');
   background-size: cover;
   opacity: 0.3;
@@ -159,22 +165,22 @@
 .bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:after {
   content: '';
   position: absolute;
-  width: 100%;
+  inline-size: 100%;
   z-index: 12;
-  left: 0;
+  inset-inline-start: 0;
 }
 
 .bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:before {
-  top: -1px;
-  height: 1.1em;
+  inset-block-start: -1px;
+  block-size: 1.1em;
   border-radius: 0.5em 0.5em 0 0;
   color: oklch(from light-dark(#fafafa, #333) round(1.21 - L) 0 0);
   background-image: linear-gradient(to bottom, light-dark(#fafafa, #333) 50%, rgba(250, 250, 250, 0) 100%);
 }
 
 .bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:after {
-  bottom: -1px;
-  height: 1.2em;
+  inset-block-end: -1px;
+  block-size: 1.2em;
   border-radius: 0 0 0.5em 0.5em;
   color: oklch(from light-dark(#fafafa, #333) round(1.21 - L) 0 0);
   background-image: linear-gradient(to top, light-dark(#fafafa, #333) 50%, rgba(250, 250, 250, 0) 100%);
@@ -193,7 +199,7 @@
 .bigfoot-footnote__wrapper {
   position: relative;
   z-index: 14;
-  width: 22em;
+  inline-size: 22em;
   display: inline-block;
   box-sizing: inherit;
   overflow: hidden;
@@ -208,9 +214,11 @@
   position: relative;
   z-index: 8;
   display: inline-block;
-  max-height: 15em;
-  padding: 1.1em 1.3em 0.2em;
-  margin-bottom: 1em;
+  max-block-size: 15em;
+  padding-block-start: 1.1em;
+  padding-block-end: 0.2em;
+  padding-inline: 1.3em;
+  margin-block-end: 1em;
   box-sizing: inherit;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -222,36 +230,36 @@
 }
 
 .bigfoot-footnote__content img {
-  max-width: 100%;
+  max-inline-size: 100%;
 }
 
 .bigfoot-footnote__content *:last-child {
-  margin-bottom: 0 !important;
+  margin-block-end: 0 !important;
 }
 
 .bigfoot-footnote__content *:first-child {
-  margin-top: 0 !important;
+  margin-block-start: 0 !important;
 }
 
 .bigfoot-footnote__tooltip {
   position: absolute;
   z-index: 12;
   box-sizing: border-box;
-  margin-left: -0.65em;
-  width: 1.3em;
-  height: 1.3em;
+  margin-inline-start: -0.65em;
+  inline-size: 1.3em;
+  block-size: 1.3em;
   transform: rotate(45deg);
   color: oklch(from light-dark(#fafafa, #333) round(1.21 - L) 0 0);
   background: light-dark(#fafafa, #333);
   border: 1px solid #c3c3c3;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-  border-top-left-radius: 0;
+  border-start-start-radius: 0;
 }
 
 .is-positioned-bottom .bigfoot-footnote__tooltip {
-  top: -0.65em;
+  inset-block-start: -0.65em;
 }
 
 .is-positioned-top .bigfoot-footnote__tooltip {
-  bottom: -0.65em;
+  inset-block-end: -0.65em;
 }
