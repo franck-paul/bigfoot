@@ -23,11 +23,11 @@ class FrontendBehaviors
     public static function publicHeadContent(): string
     {
         $settings = My::settings();
-        if (!$settings->getBool('enabled')) {
+        if (!$settings->getBool('enabled', false)) {
             return '';
         }
 
-        if ($settings->getBool('single')) {
+        if ($settings->getBool('single', false)) {
             // Single mode only, check if post/page context
             $urlTypes = ['post'];
             if (App::plugins()->moduleExists('pages')) {
